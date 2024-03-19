@@ -26,7 +26,7 @@ class _welcomeState extends State<welcome> {
             height: 40,
             width: 18,
           ),
-    Image.network('image/flutter.jpg'),
+    Image.network('image/flutter.jpg',height:200 ,),
           ElevatedButton(
             onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => welcome(),));},
             child: Text('login'),
