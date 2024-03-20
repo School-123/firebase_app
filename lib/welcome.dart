@@ -1,3 +1,4 @@
+import 'package:firebase_app/login.dart';
 import 'package:flutter/material.dart';
 
 class welcome extends StatefulWidget {
@@ -28,7 +29,11 @@ class _welcomeState extends State<welcome> {
           ),
     Image.network('image/flutter.jpg',height:200 ,),
           ElevatedButton(
-            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => welcome(),));},
+            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => login(),));
+              },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+            ),
             child: Text('login'),
           ),
           SizedBox(
@@ -37,9 +42,17 @@ class _welcomeState extends State<welcome> {
           ),
 
           ElevatedButton(
-            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => welcome(),));},
+            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => welcome(),));
+              },
             child: Text('sign up'),
           ),
+          Text('Dont have an account,sign in'),
+          SizedBox(
+            height: 40,
+            width: 18,
+          ),
+
+
         ]
     ));
   }

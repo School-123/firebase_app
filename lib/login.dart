@@ -52,9 +52,20 @@ class _loginState extends State<login> {
           ),
 
           ElevatedButton(
-            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => welcome(),));},
+            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => welcome(),));
+              },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+            ),
             child: Text('login'),
           ),
+          Text('dont have an account,sign in'),
+          SizedBox(
+            height: 40,
+            width: 18,
+          ),
+
+          Image.network('image/flutter.jpg',height:200 ,),
 ],
     ));
   }

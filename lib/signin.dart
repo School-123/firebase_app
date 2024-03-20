@@ -59,7 +59,7 @@ class _signinState extends State<signin> {
             TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'enter the passwoed',
+                hintText: 'enter the password',
               ),
             ),
             SizedBox(
@@ -77,7 +77,11 @@ class _signinState extends State<signin> {
               width: 18,
             ),
             ElevatedButton(
-              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => welcome(),));},
+              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => welcome(),));
+                },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+              ),
               child: Text('sign up'),
             ),
             SizedBox(
@@ -85,7 +89,8 @@ class _signinState extends State<signin> {
               width: 18,
             ),
 
-            Text('Already have an account?Login'),
+            Text('Already have an account?,sign up'),
+
 
 
 
