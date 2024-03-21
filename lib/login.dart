@@ -1,3 +1,4 @@
+import 'package:firebase_app/signin.dart';
 import 'package:firebase_app/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,9 @@ class _loginState extends State<login> {
         'login',style:TextStyle(fontSize: 28),
       ),
     ),
-    Text('Login to your account'),
+    Text('Login to your account',
+      textAlign: TextAlign.center,
+    ),
 
           SizedBox(
             height: 40,
@@ -60,9 +63,14 @@ class _loginState extends State<login> {
             child: Text('login'),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('dont have an account'),
-              TextButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => login(),));
+              Center(
+                child: Text('dont have an account',
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              TextButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => signin(),));
 
               }, child: Text('sign in?',)
 
