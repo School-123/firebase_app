@@ -59,7 +59,16 @@ class _loginState extends State<login> {
             ),
             child: Text('login'),
           ),
-          Text('dont have an account,sign in'),
+          Row(
+            children: [
+              Text('dont have an account'),
+              TextButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => login(),));
+
+              }, child: Text('sign in?',)
+
+              )
+            ],
+          ),
           SizedBox(
             height: 40,
             width: 18,
